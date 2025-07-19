@@ -1,4 +1,3 @@
-
 ## Pseudocode-forAll 
 - *Pseudocode-forAll* executes pseudocode following the CAIE Pseudocode Guide, applicable for exams on 2025-2029. This project is provided for personal, non-commercial use only.
 - For the smoothest coding experience, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
@@ -27,16 +26,14 @@ OUTPUT "Hello, world!"
 ## Supported Features
 
 ### Formatting and Structure
-
-* Monospaced font, consistent case (uppercase keywords, camelCase identifiers)
-* 3-space indentation, comments with `//`
-* Optional line numbering
+* Case-insensitive
+* Comments with `//`
 
 ### Variables, Constants, Data Types
 
 * Basic types: `INTEGER`, `REAL`, `CHAR`, `STRING`, `BOOLEAN`, `DATE`
 * Variable and constant declarations (`DECLARE`, `CONSTANT`)
-* Assignment using `←`
+* Assignment using `<-` which will be interpreted as `←`
 * Literal handling (including empty strings and dates)
 
 ### Arrays
@@ -55,7 +52,7 @@ OUTPUT "Hello, world!"
 
 * Input: `INPUT`
 * Output: `OUTPUT`
-* Arithmetic: `+`, `-`, `*`, `/`, `DIV`, `MOD`
+* Arithmetic: `+`, `-`, `*`, `/`, `DIV`, `MOD`, `^` (power)
 * Relational: `=`, `<>`, `<`, `<=`, `>`, `>=`
 * Logic: `AND`, `OR`, `NOT`
 * String functions: `RIGHT`, `LENGTH`, `MID`, `LCASE`, `UCASE`, concatenation `&`
@@ -91,10 +88,10 @@ OUTPUT "Hello, world!"
 * Inheritance with `INHERITS`, `SUPER` calls
 * Object instantiation with `MyObject ← NEW MyClass(...)`
 
-### Currently unsupported features from CAIE Pseudocode
+### Currently known unsupported features from CAIE Pseudocode
 
 * Values of enums are not type-casted to integers automatically. You must use `ord(<enum-value>)` and `<enum-name>(<integer>)` to type-cast between them. So you have to write `NextSeason <- Season(MyPointer^ + 1)` instead of `NextSeason <- MyPointer^ + 1`.
-* Number ranges in case-statements do not yet support negative initial value, for example, `-10 TO 10: <case-body>`
+* Number ranges in case-statements do not yet support negative initial value, for example, `-10 TO 10: <case-body>`.
 
 ## License
 
