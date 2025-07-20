@@ -1,6 +1,7 @@
 ## Pseudocode-forAll 
 - *Pseudocode-forAll* executes pseudocode following the CAIE Pseudocode Guide, applicable for exams on [2026](https://www.cambridgeinternational.org/Images/697401-2026-pseudocode-guide-for-teachers.pdf)-[2029](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf). This project is provided for personal, non-commercial use only.
 - It is specifically designed to work seamlessly in [Google Colab](https://colab.research.google.com/). There are no current plans to extend it for offline usage in Windows or Mac.
+- Checkout the examples notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raufoon/pseudocode-forall/blob/main/Examples%20-%20Pseudocode-forAll.ipynb) to better understand the supported syntax.
 - For the smoothest coding experience in Google Colab, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
 - Use the magic command syntax: `%%pseudocode` or `%%pseudocode <filename>.pseudo` at the top of the cell with your code in the rest of the cell as shown in the following examples.
 - Pseudocode-forAll works by using python to translate your pseudocode to Pascal/Delphi, which is compiled and executed.
