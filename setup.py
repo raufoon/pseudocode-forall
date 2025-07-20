@@ -6,6 +6,8 @@ from IPython.display import Markdown, HTML
 folderpath = '/content/' if not os.path.exists('/content/pseudocode-forall') else "/content/"
 
 nb_pseudocodePATH = folderpath+"pseudocode-forall/pseudocode"
+def logwrite(note): 
+  with open("install.log", 'a') as log: log.write(note)
 
 class progress_bar():
   def __init__(self, steps=100, desc="Progress... ", update=lambda n:1, wait=1, timeout=10):
@@ -83,7 +85,7 @@ else: display(Markdown("Free Pascal is already installed."))
 if which(f'{nb_pseudocodePATH}'):
   get_ipython().system(f"sudo chmod +x {nb_pseudocodePATH}")
   display(Markdown(f'<span style="color:green">pseudocode successfully installed.</span>'))
-  with open("install.log", 'a') as log: log.write("pseudocode successfully installed.\n")
+  logwrite("pseudocode successfully installed.\n")
 else:
   display(HTML(f'<span style="color:red">WARNING: {nb_pseudocodePATH} not found.</span>'))
 
@@ -91,7 +93,8 @@ from IPython.core.magic import register_cell_magic
 @register_cell_magic
 def pseudocode(line, cell):
   import re
-  fname = re.search(r"""\"[^\"]+\"|\'[^\']+\'|\S+""" ,line).group(0).strip("\"'") if line.strip() else "mypseudocode"
+  hasfilename = line.strip() != ""
+  fname = re.search(r"""\"[^\"]+\"|\'[^\']+\'|\S+""" ,line).group(0).strip("\"'") if hasfilename else "mypseudocode"
   fname = fname.strip("\"'").removesuffix('.pseudo')
   os.system(f"rm '{fname}.pas' '{fname}.o' '{fname}'")
   with open(fname+'.pseudo', 'w') as file: file.write(cell)
@@ -131,8 +134,13 @@ def pseudocode(line, cell):
       print(f"Generated Pascal Code:\n{pascode}\n" if not debug else "", f"Error Message:",*stdout, sep="\n"); return
   get_ipython().system("rm *.log *.o")
   if debug: print(f'\nRunning the program named "{fname}"...\n')
-  if not norun: get_ipython().system(f"./'{fname}'")
-with open("install.log", 'a') as log: log.write("Registered cell magic %%pseudocode.\n")
+  if not norun: 
+    get_ipython().system(f"./'{fname}'")
+    if not debug:
+      get_ipython().system(f"rm {fname}.pas {fname}")
+      if not hasfilename: get_ipython().system(f"rm {fname}.pseudo")
+
+logwrite("Registered cell magic %%pseudocode.\n")
 get_ipython().run_line_magic('alias', "pascal fpc '%l.pas' && './%l'")
 from IPython.core.magic import register_cell_magic
 @register_cell_magic
@@ -140,7 +148,7 @@ def pascal(line, cell):
   line = line if line.strip() else "__pascalprogram__.pas"
   with open(line, 'w') as file: file.write(cell)
   get_ipython().run_line_magic('pascal', line.removesuffix('.pas'))
-with open("install.log", 'a') as log: log.write("Registered cell magic %%pascal.\n")
+logwrite("Registered cell magic %%pascal.\n")
 
 pbar.set_progress(total_steps)
 pbar.stop()
