@@ -2,12 +2,12 @@
 - *Pseudocode-forAll* executes pseudocode following the CAIE Pseudocode Guide, applicable for exams on [2026](https://www.cambridgeinternational.org/Images/697401-2026-pseudocode-guide-for-teachers.pdf)-[2029](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf). This project is provided for personal, non-commercial use only.
 - It is specifically designed to work seamlessly in [Google Colab](https://colab.research.google.com/). There are no current plans to extend it for offline usage in Windows or Mac.
 - Checkout the examples notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/raufoon/pseudocode-forall/blob/main/Examples%20-%20Pseudocode-forAll.ipynb) to better understand the supported syntax.
-- For the smoothest coding experience in Google Colab, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
-- Use the magic command syntax: `%%pseudocode` or `%%pseudocode <filename>.pseudo` at the top of the cell with your code in the rest of the cell as shown in the following examples.
+- In Google Colab, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
+- Use the magic command syntax: `%%pseudocode` or `%%pseudocode <filename>.pseudo` at the top of the cell with your code in the rest of the cell.
+- To improve the display of the assignment operator `<-`, use this [userscript](https://greasyfork.org/en/scripts/542951) with [Tampermonkey](https://www.tampermonkey.net/#download). This formats `<-` as a left arrow (←) with a ligature using the Unicode character.
 - Pseudocode-forAll works by using python to translate your pseudocode to Pascal/Delphi, which is compiled and executed.
 - If you suspect there are issues with the pseudocode translator, open an [issue](https://github.com/raufoon/pseudocode-forall/issues) or ask a question in the [discussions](https://github.com/raufoon/pseudocode-forall/discussions) on GitHub including code that reproduces the issue.
 - You can also contribute to the [wiki](https://github.com/raufoon/pseudocode-forall/wiki).
-- To improve the display of the assignment operator `<-`, use the [Colab Arrow Assignment Operator with Fira Font](https://greasyfork.org/en/scripts/542951) userscript with Tampermonkey. This formats `<-` as a left arrow (←) with a ligature using the Unicode character.
 
 ## How to set up in Google Colab
 
