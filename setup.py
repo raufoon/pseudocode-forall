@@ -145,7 +145,7 @@ with open("install.log", 'a') as log: log.write("Registered cell magic %%pascal.
 pbar.set_progress(total_steps)
 pbar.stop()
 
-display(Markdown("""# Welcome to Pseudocode-forAll!
+display(Markdown("""## Welcome to Pseudocode-forAll!
 ### Pseudocode-forAll runs pseudocode based on the CAIE Pseudocode Guide, applicable for exams on 2025-2029.
 - For smoothest coding experience, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
 - To use a cell to run pseudocode, use the magic command syntax: `%%pseudocode` or `%%pseudocode <filename>.pseudo` at the top of the cell with your code in the rest of the cell as shown in the following examples."""))
@@ -172,7 +172,3 @@ dark_mode_code = """
 </div>
 """
 display(HTML(dark_mode_code))
-
-display(Markdown("""- Pseudocode-forAll works by using python to translate your pseudocode to Pascal/Delphi, which is then compiled and run.
-- Pseudocode-forAll differs from CAIE Pseudocode in these aspects:<br> **-** Values of enums are not type-casted to integers automatically. You must use `ord(<enum-value>)` and `<enum-name>(<integer>)` to type-cast between them. So you have to write `NextSeason <- Season(MyPointer^ + 1)` instead of `NextSeason <- MyPointer^ + 1`.
-- If you suspect there are issues with the pseudocode translator, then contact me with the code that reproduces the issue."""))
