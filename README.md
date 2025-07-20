@@ -5,7 +5,7 @@
 - Pseudocode-forAll works by using python to translate your pseudocode to Pascal/Delphi, which is compiled and executed.
 - If you suspect there are issues with the pseudocode translator, open an [issue](https://github.com/raufoon/pseudocode-forall/issues) or ask a question in the [discussions](https://github.com/raufoon/pseudocode-forall/discussions) on GitHub including code that reproduces the issue.
 - You can also contribute to the [wiki](https://github.com/raufoon/pseudocode-forall/wiki).
-- To improve the display of the assignment operator `<-`, use the [Colab Arrow Assignment Operator with Fira Font](https://greasyfork.org/en/scripts/542951-colab-arrow-assignment-operator-with-fira-font) userscript with Tampermonkey. This formats `<-` as a left arrow (←) with a ligature using the Unicode character.
+- To improve the display of the assignment operator `<-`, use the [Colab Arrow Assignment Operator with Fira Font](https://greasyfork.org/en/scripts/542951) userscript with Tampermonkey. This formats `<-` as a left arrow (←) with a ligature using the Unicode character.
 
 ## How to set up in Google Colab
 
