@@ -1,5 +1,5 @@
 ## Pseudocode-forAll 
-- *Pseudocode-forAll* executes pseudocode following the CAIE Pseudocode Guide, applicable for exams on 2025-2029. This project is provided for personal, non-commercial use only.
+- *Pseudocode-forAll* executes pseudocode following the CAIE Pseudocode Guide, applicable for exams on [2026](https://www.cambridgeinternational.org/Images/697401-2026-pseudocode-guide-for-teachers.pdf)-[2029](https://www.cambridgeinternational.org/Images/721401-2027-2029-pseudocode-guide.pdf). This project is provided for personal, non-commercial use only.
 - For the smoothest coding experience, turn off syntax check by selecting **Tools>Settings>Editor>[scroll down] Code Diagnostics>None**.
 - Use the magic command syntax: `%%pseudocode` or `%%pseudocode <filename>.pseudo` at the top of the cell with your code in the rest of the cell as shown in the following examples.
 - Pseudocode-forAll works by using python to translate your pseudocode to Pascal/Delphi, which is compiled and executed.
