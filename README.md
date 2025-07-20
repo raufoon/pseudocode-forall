@@ -91,7 +91,6 @@ OUTPUT "Hello, world!"
 ### Currently known unsupported features from CAIE Pseudocode
 
 * Values of enums are not type-casted to integers automatically. You must use `ord(<enum-value>)` and `<enum-name>(<integer>)` to type-cast between them. So you have to write `NextSeason <- Season(MyPointer^ + 1)` instead of `NextSeason <- MyPointer^ + 1`.
-* Number ranges in case-statements do not yet support negative initial value, for example, `-10 TO 10: <case-body>`.
 
 ## License
 
