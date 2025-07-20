@@ -136,9 +136,10 @@ def pseudocode(line, cell):
   if debug: print(f'\nRunning the program named "{fname}"...\n')
   if not norun: 
     get_ipython().system(f"./'{fname}'")
-    if not debug:
-      get_ipython().system(f"rm {fname}.pas {fname}")
-      if not hasfilename: get_ipython().system(f"rm {fname}.pseudo")
+  if not debug:
+    get_ipython().system(f"rm {fname}.pas")
+    if not norun: get_ipython().system(f"rm {fname}")
+    if not hasfilename: get_ipython().system(f"rm {fname}.pseudo")
 
 logwrite("Registered cell magic %%pseudocode.\n")
 get_ipython().run_line_magic('alias', "pascal fpc '%l.pas' && './%l'")
